@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Schedule Appointment</title>
+
+    <!-- Stylesheet -->
+    <link rel="stylesheet" href="..\public\styles\home.css">
+
+    <script src="../public/scripts/home.js" defer></script>
+</head>
+<body>
+    <form id="schedule" action="#" method="get">
+        <label for="fname">First Name:</label>
+        <input type="text" id="fname" name="fname">
+        <span class="err" id="err-fname">First name is required</span> <br>
+                
+        <label for="lname">Last Name:</label>
+        <input type="text" id="lname" name="lname">
+        <span class="err" id="err-lname">Last name is required</span> <br>
+
+        <label for="meet-date">Meeting Date:</label>
+        <input type="date" id="meet-date" name="meet-date"> <br>
+
+        <label for="meet-time">Meeting Time:</label>
+        <input type="time" id="meet-time" name="meet-time"> <br>
+
+        <button type="submit" id="submit-button">Schedule Appointment</button>
+    </form>
+</body>
+</html>

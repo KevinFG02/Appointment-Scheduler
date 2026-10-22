@@ -9,8 +9,8 @@ const PORT = 3003;
 
 // Define a default route ("/")
 app.get('/', (req, res) => {
-    res.send('Hello World');
-    // res.sendFile(`${import.meta.dirname}/views/home.html`);
+    //res.send('Hello World');
+    res.sendFile(`${import.meta.dirname}/views/home.html`);
 });
 
 // Start the server on the designated port
