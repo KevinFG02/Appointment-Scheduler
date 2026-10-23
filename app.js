@@ -18,12 +18,20 @@ app.use(express.urlencoded({extended: true}));
 
 // Define a default route ("/")
 app.get('/', (req, res) => {
-    //res.send('Hello World');
     res.sendFile(`${import.meta.dirname}/views/home.html`);
 });
 
 // Confirm route
 app.post('/confirm-appointment', (req, res) => {
+    console.log(req.body);
+    
+    // Add the next steps here.
+    const appointment = req.body;
+    appointment['timestamp'] = new Date();
+
+    appointments.push(appointment);
+    console.log(appointments);
+
     res.sendFile(`${import.meta.dirname}/views/confirm.html`);
 });
 
