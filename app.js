@@ -29,16 +29,17 @@ app.post('/confirm-appointment', (req, res) => {
     const appointment = req.body;
     appointment['timestamp'] = new Date();
 
+    // Pushing appointment object into appointment array
     appointments.push(appointment);
     console.log(appointments);
 
     res.sendFile(`${import.meta.dirname}/views/confirm.html`);
 });
 
+// Admin route
 app.get('/admin', (req, res) => {
     res.send(appointments);
 });
-
 
 // Start the server on the designated port
 app.listen(PORT, () => {
